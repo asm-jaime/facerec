@@ -1,0 +1,38 @@
+# folders
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+*.jpeg
+*.mp4
+# build
+facerec
+
+# Folders
+_obj
+_test
+z_buff
+buff/
+Godeps/
+vendor/
+build/
+
+# Files
+go
+
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
