@@ -1,11 +1,18 @@
 package facerec
 
-// #cgo pkg-config: dlib-1
-// #cgo CXXFLAGS: -std=c++1z -Wall -O3 -DNDEBUG -march=native
-// #cgo LDFLAGS: -ljpeg
-// #include <stdlib.h>
-// #include <stdint.h>
-// #include "facerec.h"
+/*
+#cgo pkg-config: dlib-1
+#ifdef CUDA_FOUND
+#cgo CXXFLAGS: -std=c++1z -Wall -O3 -DNDEBUG -march=native -DDLIB_USE_CUDA=1 -DUSE_AVX_INSTRUCTIONS=1
+#cgo LDFLAGS: -ljpeg -ldlib -L/usr/local/cuda/lib64 -lcudnn -lpthread -lcuda -lcudart -llapack -lblas -lcublas -lcurand -lcusolver
+#else
+#cgo CXXFLAGS: -std=c++1z -Wall -O3 -DNDEBUG -march=native
+#cgo LDFLAGS: -ljpeg
+#endif
+#include <stdlib.h>
+#include <stdint.h>
+#include "facerec.h"
+*/
 import "C"
 import (
 	"image"
